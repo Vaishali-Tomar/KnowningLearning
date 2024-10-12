@@ -14,33 +14,33 @@ function Login() {
       storedUser.password === credentials.password
     ) {
       alert('Login successful!');
-      navigate('/quiz');  // Redirect to the quiz page
+      navigate('/quiz');
     } else {
       alert('Invalid username or password.');
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-500">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-sm w-full">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-gray-700">Login</h2>
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-500 to-blue-500 p-4">
+      <div className="bg-white shadow-xl rounded-lg p-8 w-full max-w-md">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
         <input
           type="text"
           placeholder="Username"
           value={credentials.username}
           onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
-          className="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="border border-gray-300 rounded-lg p-2 mb-4 w-full focus:outline-none focus:ring-2 focus:ring-purple-400"
         />
         <input
           type="password"
           placeholder="Password"
           value={credentials.password}
           onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
-          className="w-full px-4 py-2 mb-6 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="border border-gray-300 rounded-lg p-2 mb-4 w-full focus:outline-none focus:ring-2 focus:ring-purple-400"
         />
         <button
           onClick={handleLogin}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-lg transition duration-300"
         >
           Login
         </button>

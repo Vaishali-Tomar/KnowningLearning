@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Signup() {
+  // using useState for updating 
   const [userData, setUserData] = useState({ username: '', password: '' });
   const navigate = useNavigate();
 
@@ -12,6 +13,7 @@ function Signup() {
       navigate('/login');
     } else {
       alert('Please enter both username and password.');
+
     }
   };
 
